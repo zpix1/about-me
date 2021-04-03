@@ -149,18 +149,38 @@ export default {
   padding-bottom: 20px;
 }
 
-.grid-view {
-  display: grid;
 
-  /* grid-template-columns: minmax(0, 700px); */
+@media (min-width:320px) { 
+  .grid-view {
+    display: grid;
 
-  gap: 50px;
+    /* grid-template-columns: minmax(0, 700px); */
 
-  grid-template-areas: 
-    "about-me contacts"
-    "projects ctf"
-    "projects other-projects"
-    "projects other-projects"
+    gap: 50px;
+
+    grid-template-areas: 
+      "about-me contacts"
+      "projects projects"
+      "projects projects"
+      "other-projects other-projects"
+      "ctf ctf"
+  }
+}
+
+@media (min-width:700px) { 
+  .grid-view {
+    display: grid;
+
+    /* grid-template-columns: minmax(0, 700px); */
+
+    gap: 50px;
+
+    grid-template-areas: 
+      "about-me contacts"
+      "projects ctf"
+      "projects other-projects"
+      "projects other-projects"
+  }
 }
 
 .grid-element {
