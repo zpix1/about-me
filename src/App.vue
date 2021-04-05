@@ -19,12 +19,12 @@
         <li><Url url="https://zpix1.github.io/">Personal blog</Url> (RU)</li>
         <li><Url url="https://r45.xyz">Backend server</Url></li>
         <li>
-          <div v-if="showEmail">
+          <!-- <div v-if="showEmail"> -->
             <Url :url="'mailto:' + email">{{ email }}</Url>
-          </div>
+          <!-- </div>
           <div v-else>
             <div class="pseudo-a" @click="showEmail = true">&lt;show email&gt;</div>
-          </div>
+          </div> -->
         </li>
       </ul>
     </div>
@@ -87,9 +87,7 @@
         <li>pwn.college belt owner: <Url url="https://pwn.college/belts">pwn.college/belts</Url> (search for <b>ib</b>)</li>
         <li>Various CTF winner and participant (Ugra CTF 2020, Unicorn CTF 2020, VKA CTF 2020, Cyberchallenge, SPB CTF 2021, Volga CTF Quals 2021)</li>
       </ul>
-    </div>
-    <div class="grid-element" style="grid-area: other projects">
-      <div class="subheader">My other projects</div>
+      <div style="padding-top: 20px" class="subheader">My other projects</div>
       <ol>
         <li><Url url="https://zpix1.github.io/book-guess/">Book Guess</Url>: guess the book by it's beginning (RU)</li>
         <li><Url url="https://zpix1.github.io/rsa-idioten/">RSA Idioten</Url>: solve RSA CTF tasks easily</li>
@@ -99,6 +97,9 @@
         <li><Url url="https://zpix1.github.io/webwriter">WebWriter</Url>: Vue.js ans Firestore web notebook</li>
 
       </ol>
+    </div>
+    <div class="grid-element" style="grid-area: other-projects">
+      
     </div>
   </div>
 </div>
@@ -156,14 +157,16 @@ export default {
 
     /* grid-template-columns: minmax(0, 700px); */
 
-    gap: 50px;
+    /* gap: 50px; */
 
     grid-template-areas: 
       "about-me contacts"
       "projects projects"
       "projects projects"
-      "other-projects other-projects"
       "ctf ctf"
+  }
+  .grid-element {
+    padding-bottom: 20px;
   }
 }
 
@@ -178,7 +181,6 @@ export default {
     grid-template-areas: 
       "about-me contacts"
       "projects ctf"
-      "projects other-projects"
       "projects other-projects"
   }
 }
