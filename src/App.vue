@@ -85,7 +85,7 @@
       <ul>
         <li>Member of <Url url="https://ctftime.org/team/52908">YummyTacos</Url> team</li>
         <li>pwn.college belt owner: <Url url="https://pwn.college/belts">pwn.college/belts</Url> (search for <b>ib</b>)</li>
-        <li>Various CTF winner and participant (Ugra CTF 2020, Unicorn CTF 2020, VKA CTF 2020, Cyberchallenge, SPB CTF 2021, Volga CTF Quals 2021)</li>
+        <li>Various CTF winner and participant (Ugra CTF 2020, Unicorn CTF 2020, VKA CTF 2020, Cyberchallenge, SPB CTF 2021, Volga CTF Quals 2021, YetiCTF 2021)</li>
       </ul>
       <div style="padding-top: 20px" class="subheader">My other projects</div>
       <ol>
