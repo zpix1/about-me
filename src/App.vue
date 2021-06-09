@@ -217,7 +217,7 @@ b {
   font-size: 0.8em;
   border: 1px solid black;
   border-radius: 2px;
-  padding: 1px;
+  padding: 1px 5px 1px 5px;
   margin: 2px;
   float: right;
 }
