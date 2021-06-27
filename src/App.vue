@@ -85,7 +85,8 @@
       <ul>
         <li>Member of <Url url="https://ctftime.org/team/52908">YummyTacos</Url> team</li>
         <li>pwn.college belt owner: <Url url="https://pwn.college/belts">pwn.college/belts</Url> (search for <b>ib</b>)</li>
-        <li>Various CTF winner and participant (Ugra CTF 2020, Unicorn CTF 2020, VKA CTF 2020, Cyberchallenge, SPB CTF 2021, Volga CTF Quals 2021, YetiCTF 2021)</li>
+        <li>Various CTF winner and participant ({{ ctfHistory.map(ctf => ctf.name).join(', ') }})
+        </li>
       </ul>
       <div style="padding-top: 20px" class="subheader">My other projects</div>
       <ol>
@@ -107,6 +108,7 @@
 
 <script>
 import Url from './components/Url.vue'
+import { ctfHistory } from './porfolio';
 
 export default {
   name: 'App',
@@ -116,7 +118,8 @@ export default {
   data: function () {
     return {
       showEmail: false,
-      email: atob('ZGN6cGl4QGdtYWlsLmNvbQ==')
+      email: atob('ZGN6cGl4QGdtYWlsLmNvbQ=='),
+      ctfHistory: ctfHistory
     }
   },
   computed: {
@@ -176,7 +179,7 @@ export default {
 
     /* grid-template-columns: minmax(0, 700px); */
 
-    gap: 50px;
+    gap: 00px 50px;
 
     grid-template-areas: 
       "about-me contacts"
