@@ -85,7 +85,10 @@
       <ul>
         <li>Member of <Url url="https://ctftime.org/team/52908">YummyTacos</Url> team</li>
         <li>pwn.college belt owner: <Url url="https://pwn.college/belts">pwn.college/belts</Url> (search for <b>ib</b>)</li>
-        <li>Various CTF winner and participant ({{ ctfHistory.map(ctf => ctf.name).join(', ') }})
+        <li>Various CTF winner and participant 
+          <span v-for="ctf, i in ctfHistory" :key="ctf.name" :title="`Result: ${ctf.result}\nTeam: ${ctf.team}`">
+            {{ ctf.name }}{{ i + 1 !== ctfHistory.length ? ', ' : ''}}
+          </span>
         </li>
       </ul>
       <div style="padding-top: 20px" class="subheader">My other projects</div>
