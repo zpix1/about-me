@@ -108,7 +108,8 @@
 
 <script>
 import Url from './components/Url.vue'
-import { ctfHistory } from './porfolio';
+import ctfHistory from './data';
+// import { ctfHistory } from './porfolio';
 
 export default {
   name: 'App',

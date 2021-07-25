@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@babel/polyfill": "^7.12.1",
+    "@notionhq/client": "^0.2.3",
     "core-js": "^3.6.5",
     "vue": "^3.0.0"
   },
