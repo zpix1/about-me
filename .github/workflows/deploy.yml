@@ -16,7 +16,7 @@ jobs:
           node load-elements.mjs
           cd ..
           npm run build
-        with:
+        env:
           NOTION_DATABASE_ID: ${{ secrets.NOTION_DATABASE_ID }}
           NOTION_KEY: ${{ secrets.NOTION_KEY }}
 
