@@ -98,7 +98,7 @@
         <li><Url url="https://zpix1.github.io/cellular-automaton-showroom/">Cellular Automaton Showroom</Url>: rule 110 and other playfield</li>
         <li><Url url="https://github.com/zpix1/Automobilist">Automobilist</Url>: C++ SFML pseudo-3d graphics racing game</li>
         <li><Url url="https://github.com/zpix1/polyomino">polyomino</Url>: set of tools to split figures into polyominos</li>
-        <li><Url url="https://zpix1.github.io/webwriter">WebWriter</Url>: Vue.js ans Firestore web notebook</li>
+        <li><Url url="https://zpix1.github.io/webwriter">WebWriter</Url>: Vue.js and Firestore web notebook</li>
 
       </ol>
     </div>
