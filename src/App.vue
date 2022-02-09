@@ -18,6 +18,7 @@
         <li><Url url="https://github.com/zpix1/">Github @zpix1</Url></li>
         <li><Url url="https://zpix1.github.io/">Personal blog</Url> (RU)</li>
         <li><Url url="https://r45.xyz">Backend server</Url></li>
+        <li><Url url="https://www.linkedin.com/in/ivan-baksheev-94518a230/">LinkedIn Profile</Url></li>
         <li>
           <!-- <div v-if="showEmail"> -->
             <Url :url="'mailto:' + email">{{ email }}</Url>
