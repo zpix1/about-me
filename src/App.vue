@@ -5,7 +5,7 @@
     <div class="grid-element" style="grid-area: about-me">
       <div class="subheader">About me</div>
       <ul>
-        <li><b>Ivan Baksheev</b></li>
+        <li><b>Ivan Baksheev</b>, <Url url="./CV.pdf">CV</Url></li>
         <li>{{ yearsOld }} old, Novosibirsk, Russia</li>
         <li>NSU, <Url url="https://www.nsu.ru/n/information-technologies-department/">Information Technologies Department</Url> student</li>
         <li>Main interests in <b>mathematics</b>, <b>programming</b>, <b>computer security</b></li>
