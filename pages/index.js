@@ -126,7 +126,6 @@ export default function Home() {
     }
     
     .header {
-      padding-top: 10px; 
       font-size: 1.5em;
       font-weight: 700;
       padding-bottom: 20px;
