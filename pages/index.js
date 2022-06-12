@@ -97,7 +97,7 @@ export default function Home() {
           <ul>
             <li>Member of <Url url="https://ctftime.org/team/52908">YummyTacos</Url> team</li>
             <li>pwn.college belt owner: <Url url="https://pwn.college/belts">pwn.college/belts</Url> (search for <b>ib</b>)</li>
-            <li>Various CTF winner and participant:
+            <li>Various CTF winner and participant:{' '}
               {ctfs}
             </li>
           </ul>
