@@ -19,7 +19,7 @@ const list = async () => {
         ({Result, Team, Name}) => {
             return {
                 result: Result.multi_select.map(e => e.name)[0],
-                team: Team.multi_select.map(e => e.name)[0],
+                team: Team.multi_select.map(e => e.name).join(", "),
                 name: Name.title[0].text.content
             }
         }
