@@ -20,6 +20,7 @@ jobs:
           cd src
           node load-elements.mjs
           cd ..
+          npm run build
           npm run export
         env:
           NOTION_DATABASE_ID: ${{ secrets.NOTION_DATABASE_ID }}
