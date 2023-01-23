@@ -93,6 +93,7 @@ export default function Home() {
           <div className="grid-element" style={{gridArea: 'ctf'}}>
             <div className="subheader">My CTF career</div>
             <ul>
+              <li>Member of <Url url="https://ctftime.org/team/193650">smiley-from-telega</Url> team</li>
               <li>Member of <Url url="https://ctftime.org/team/52908">YummyTacos</Url> team</li>
               <li>pwn.college belt owner: <Url url="https://pwn.college/belts">pwn.college/belts</Url> (search for <b>ib</b>)</li>
               <li>Various CTF winner and participant:{' '}
