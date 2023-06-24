@@ -27,7 +27,8 @@ export default function Home() {
             <ul>
               <li><b>Ivan Baksheev</b>, <Url url="./CV.pdf">CV</Url></li>
               <li>{yearsOld} old, Novosibirsk, Russia</li>
-              <li>NSU, <Url url="https://www.nsu.ru/n/information-technologies-department/">Information Technologies Department</Url> student</li>
+              {/* <li>NSU, <Url url="https://www.nsu.ru/n/information-technologies-department/">Information Technologies Department</Url> student</li> */}
+              <li>Bachelor's Degree in Computer Science, NSU 2023</li>
               <li>Main interests in <b>mathematics</b>, <b>programming</b>, <b>computer security</b></li>
             </ul>
           </div>

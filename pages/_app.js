@@ -7,7 +7,7 @@ function MyApp({ Component, pageProps }) {
       <title>Ivan's personal page</title>
       <meta name="description" content="Ivan's personal page: software engineering, math, computer security. Contacts and CV." />
       <link rel="shortcut icon" href="/about-me/favicon.ico" type="image/x-icon" />
-    </Head>
+    </Head> 
     <Component {...pageProps} />
   </>
 }
