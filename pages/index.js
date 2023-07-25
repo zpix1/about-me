@@ -76,7 +76,7 @@ export default function Home() {
                 {['Chrome', 'js'].map(tag => <div key={tag} className="badge">{tag}</div>)}
                 <ul>
                   <li>A chrome extenstion to <b>disable youtube video titles translation</b></li>
-                  <li><b>1000+</b> active users</li>
+                  <li><b>5000+</b> active users</li>
                   <li><Url url="https://github.com/zpix1/yt-anti-translate">Github</Url></li>
                   <li><Url url="https://zpix1.github.io/2018/12/25/YouTube-Anti-Translate/">Blog page</Url> (RU)</li>
                 </ul>
