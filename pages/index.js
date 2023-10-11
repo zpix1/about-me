@@ -2,6 +2,30 @@ import { Url } from "../src/Url";
 import { useMemo } from "react";
 import ctfHistory from "../src/data.json";
 
+function monthDiff(d1, d2) {
+  let months = (d2.getFullYear() - d1.getFullYear()) * 12;
+  months -= d1.getMonth();
+  months += d2.getMonth();
+  return months <= 0 ? 0 : months;
+}
+
+function formatYear(year) {
+  if (year % 10 == 1) {
+    return year + " year";
+  }
+  return year + " years";
+}
+
+function formatMonth(month) {
+  if (month === 0) {
+    return "";
+  }
+  if (month % 10 == 1) {
+    return month + " month";
+  }
+  return month + " months";
+}
+
 export default function Home() {
   const yearsOld = useMemo(() => {
     const now = new Date();
@@ -11,6 +35,16 @@ export default function Home() {
       return year + " year";
     }
     return year + " years";
+  }, []);
+
+  const workExperience = useMemo(() => {
+    const now = new Date();
+    const start = new Date("July 1, 2021 12:00:00");
+    const expInMonth = monthDiff(start, now);
+    const years = formatYear(Math.floor(expInMonth / 12));
+    const months = formatMonth(expInMonth % 12);
+
+    return `${years}${months && ", " + months}`
   }, []);
 
   const ctfs = ctfHistory.map((ctf, i) => (
@@ -63,7 +97,7 @@ export default function Home() {
             </ul>
           </div>
           <div className="grid-element" style={{ gridArea: "career" }}>
-            <div className="subheader">My work experience</div>
+            <div className="subheader">My work experience ({workExperience})</div>
             <ol>
               <li className="project-li">
                 <b>Huawei R&D</b>
@@ -74,14 +108,13 @@ export default function Home() {
                 ))}
                 <ul>
                   <li>
-                    Working on an IDE-related desktop software using TypeScript,
-                    Java
+                    Working on an IDE-related desktop software using <b>TypeScript</b>, <b>React</b>, <b>Java</b>
                   </li>
                 </ul>
               </li>
               <li className="project-li">
                 <b>JetBrains</b>
-                {["Software Developer", "Sept. 2021 – Mar. 2022"].map((tag) => (
+                {["Software Developer", "July 2021 – Mar. 2022"].map((tag) => (
                   <div key={tag} className="badge">
                     {tag}
                   </div>
@@ -101,8 +134,7 @@ export default function Home() {
                     Well tested application using <b>Cypress</b>
                   </li>
                   <li>
-                    Read some Scala code to find and fix some legacy bugs, wrote
-                    some scripts by myself
+                    Worked with legacy Scala codebase to fix old bugs and add new features
                   </li>
                   <li>
                     Worked a lot with <b>IntelliJ IDEA</b>, <b>WebStorm</b>,{" "}
@@ -111,7 +143,7 @@ export default function Home() {
                     <b>AWS S3</b>, <b>Elasticsearch</b>
                   </li>
                   <li>
-                    Created a simple web application to give users possibility
+                    Created a web application to give users possibility
                     to compare some entities for ML (like Yandex.Toloka), used{" "}
                     <b>FastAPI</b> as a backend, it helped ML team get a more
                     precise model
