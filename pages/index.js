@@ -261,7 +261,7 @@ export default function Home() {
             </ol>
           </div>
           <div className="grid-element" style={{ gridArea: "ctf" }}>
-            <div className="subheader">My CTF career</div>
+            <div className="subheader">My computer security / CTF career</div>
             <ul>
               <li>
                 Bughunting a bit on{" "}
