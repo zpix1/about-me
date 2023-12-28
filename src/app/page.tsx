@@ -17,6 +17,7 @@ import {
 } from "@/components/ui/tooltip";
 import ctfHistory from "../../ctfs/data.json";
 import { monthDiff, formatYear, formatMonth } from "@/lib/utils";
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 
 export const metadata: Metadata = {
   title: `${RESUME_DATA.name} | ${RESUME_DATA.about}`,
@@ -227,7 +228,13 @@ export default function Page() {
           </Card>
           <Card>
             <CardContent className="text-sm">
-              Various CTF winner and participant: {ctfs}
+            <Collapsible>
+  <CollapsibleTrigger>Various CTF winner and participant ({ctfs.length} events)</CollapsibleTrigger>
+  <CollapsibleContent>
+  {ctfs}
+  </CollapsibleContent>
+</Collapsible>
+              
             </CardContent>
           </Card>
         </Section>
