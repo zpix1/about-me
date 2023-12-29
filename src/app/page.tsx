@@ -4,7 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { CommandMenu } from "@/components/command-menu";
 import { Metadata } from "next";
 import { Section } from "@/components/ui/section";
-import { GlobeIcon, MailIcon, PhoneIcon } from "lucide-react";
+import { ChevronsUpDown, GlobeIcon, MailIcon, PhoneIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { RESUME_DATA } from "@/data/resume-data";
 import { ProjectCard } from "@/components/project-card";
@@ -17,7 +17,11 @@ import {
 } from "@/components/ui/tooltip";
 import ctfHistory from "../../ctfs/data.json";
 import { monthDiff, formatYear, formatMonth } from "@/lib/utils";
-import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
+import {
+  Collapsible,
+  CollapsibleContent,
+  CollapsibleTrigger,
+} from "@/components/ui/collapsible";
 
 export const metadata: Metadata = {
   title: `${RESUME_DATA.name} | ${RESUME_DATA.about}`,
@@ -43,7 +47,7 @@ export default function Page() {
           {i + 1 !== ctfHistory.length ? ",\u00A0" : ""}
         </TooltipTrigger>
         <TooltipContent>
-          <p>{`Result: ${ctf.result}\nTeam: ${ctf.team}`}</p>
+          <p>{`Result: ${ctf.result}\n\nTeam: ${ctf.team}`}</p>
         </TooltipContent>
       </Tooltip>
     </TooltipProvider>
@@ -228,13 +232,26 @@ export default function Page() {
           </Card>
           <Card>
             <CardContent className="text-sm">
-            <Collapsible>
-  <CollapsibleTrigger>Various CTF winner and participant ({ctfs.length} events)</CollapsibleTrigger>
-  <CollapsibleContent>
-  {ctfs}
-  </CollapsibleContent>
-</Collapsible>
-              
+              <Collapsible>
+                <div className="flex items-center justify-between">
+                  <h4 className="text-sm">
+                    Various CTF winner and participant ({ctfs.length} events)
+                  </h4>
+                  <CollapsibleTrigger asChild>
+                    <Button
+                      variant="ghost"
+                      size="sm"
+                      className="w-9 p-0 print:hidden"
+                    >
+                      <ChevronsUpDown className="h-4 w-4" />
+                      <span className="sr-only">Toggle</span>
+                    </Button>
+                  </CollapsibleTrigger>
+                </div>
+                <CollapsibleContent className="space-y-2 text-xs">
+                  {ctfs}
+                </CollapsibleContent>
+              </Collapsible>
             </CardContent>
           </Card>
         </Section>
@@ -247,7 +264,7 @@ export default function Page() {
           </div>
         </Section>
 
-        <Section className="print-force-new-page scroll-mb-16">
+        <Section className="print-force-new-page scroll-mb-16 print:pt-12">
           <h2 className="text-xl font-bold">Projects</h2>
           <div className="-mx-3 grid grid-cols-1 gap-3 print:grid-cols-3 print:gap-2 md:grid-cols-2 lg:grid-cols-3">
             {RESUME_DATA.projects.map((project) => {
