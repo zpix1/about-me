@@ -135,7 +135,8 @@ export default function Page() {
         </div>
         <Section>
           <h2 className="text-xl font-bold">
-            Work Experience ({workExperience})
+            Work Experience
+            {/* <span className="font-sm">({workExperience})</span> */}
           </h2>
           {RESUME_DATA.work.map((work) => {
             return (
