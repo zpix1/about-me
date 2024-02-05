@@ -14,7 +14,7 @@ export const RESUME_DATA = {
   personalWebsiteUrl: "https://zpix1.github.io",
   contact: {
     email: "dczpix@gmail.com",
-    tel: false,
+    tel: "+79130651214",
     social: [
       {
         name: "GitHub",
@@ -37,25 +37,28 @@ export const RESUME_DATA = {
     {
       school: "Novosibirsk State University",
       degree: "Master's Degree in Informatics and Computer Engineering",
-      start: "2023",
-      end: "2025",
+      start: "Sept. 2023",
+      end: "July 2025",
     },
     {
       school: "Novosibirsk State University",
       degree: "Bachelor's Degree in Informatics and Computer Engineering",
-      start: "2019",
-      end: "2023",
+      start: "Sept. 2019",
+      end: "July 2023",
     },
   ],
   work: [
     {
-      company: "Huawei R&D",
+      company: "Manpower Group",
       badges: [],
       title: "Typescript Engineer",
       start: "Apr. 2022",
       end: "To Date",
-      description:
-        "Working on an IDE-related desktop software using Electron, TypeScript, React, Java",
+      description: `Contributed to Huawei Project as a Software Engineer, specializing in IDE desktop software. 
+Utilized Electron, TypeScript, React, and Java to drive UI development, UI component library creation, and IDE extension infrastructure. 
+Spearheaded CI setup and visual regression testing. 
+Actively developed features for the IDE base platform, while also fixing bugs to enhance overall software reliability. 
+Additionally, took ownership of a project component and effectively managed its development lifecycle`,
     },
     {
       company: "JetBrains",
