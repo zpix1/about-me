@@ -49,7 +49,7 @@ export const RESUME_DATA = {
   ],
   work: [
     {
-      company: "Manpower Group",
+      company: "Huawei RRI",
       badges: [],
       title: "Typescript Engineer",
       start: "Apr. 2022",
