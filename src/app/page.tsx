@@ -4,7 +4,13 @@ import { Badge } from "@/components/ui/badge";
 import { CommandMenu } from "@/components/command-menu";
 import { Metadata } from "next";
 import { Section } from "@/components/ui/section";
-import { ChevronsUpDown, GlobeIcon, MailIcon, PhoneIcon } from "lucide-react";
+import {
+  CalendarIcon,
+  ChevronsUpDown,
+  GlobeIcon,
+  MailIcon,
+  PhoneIcon,
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { RESUME_DATA } from "@/data/resume-data";
 import { ProjectCard } from "@/components/project-card";
@@ -54,7 +60,7 @@ export default function Page() {
   ));
 
   return (
-    <main className="container relative mx-auto scroll-my-12 overflow-auto p-4 print:p-12 md:p-16">
+    <main className="container relative mx-auto scroll-my-12 overflow-auto p-4 md:p-16 print:p-12">
       <section className="mx-auto w-full max-w-2xl space-y-8 bg-white print:space-y-6">
         <div className="flex items-center justify-between">
           <div className="flex-1 space-y-1.5">
@@ -79,6 +85,7 @@ export default function Page() {
                   variant="outline"
                   size="icon"
                   asChild
+                  title="Email"
                 >
                   <a href={`mailto:${RESUME_DATA.contact.email}`}>
                     <MailIcon className="h-4 w-4" />
@@ -91,6 +98,7 @@ export default function Page() {
                   variant="outline"
                   size="icon"
                   asChild
+                  title="Mobile phone"
                 >
                   <a href={`tel:${RESUME_DATA.contact.tel}`}>
                     <PhoneIcon className="h-4 w-4" />
@@ -104,6 +112,7 @@ export default function Page() {
                   variant="outline"
                   size="icon"
                   asChild
+                  title={social.name}
                 >
                   <a href={social.url}>
                     <social.icon className="h-4 w-4" />
@@ -267,7 +276,7 @@ export default function Page() {
 
         <Section className="print-force-new-page scroll-mb-16 print:pt-12">
           <h2 className="text-xl font-bold">Projects</h2>
-          <div className="-mx-3 grid grid-cols-1 gap-3 print:grid-cols-3 print:gap-2 md:grid-cols-2 lg:grid-cols-3">
+          <div className="-mx-3 grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3 print:grid-cols-3 print:gap-2">
             {RESUME_DATA.projects.map((project) => {
               return (
                 <ProjectCard

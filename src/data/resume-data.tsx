@@ -2,6 +2,7 @@ import { GitHubIcon } from "@/components/icons/GitHubIcon";
 import { LinkedInIcon } from "@/components/icons/LinkedInIcon";
 import { TelegramIcon } from "@/components/icons/TelegramIcon";
 import Avatar from "../images/photo.jpg";
+import { CalendarIcon } from "lucide-react";
 
 export const RESUME_DATA = {
   name: "Ivan Baksheev",
@@ -16,6 +17,11 @@ export const RESUME_DATA = {
     email: "dczpix@gmail.com",
     tel: "+79130651214",
     social: [
+      {
+        name: "Cal.com",
+        url: "https://cal.com/ibaksheev",
+        icon: CalendarIcon,
+      },
       {
         name: "GitHub",
         url: "https://github.com/zpix1",
