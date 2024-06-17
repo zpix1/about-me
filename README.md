@@ -7,6 +7,7 @@ Built with Next.js and shadcn/ui, deployed on Vercel.
 # Actions
 
 1. Push
+2. push
 
 # License
 
