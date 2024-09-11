@@ -18,8 +18,8 @@ export const RESUME_DATA = {
     tel: "+79130651214",
     social: [
       {
-        name: "Cal.com",
-        url: "https://cal.com/ibaksheev",
+        name: "Google Calendar",
+        url: "https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0C1oRprVPjFWSJi-jnQkibluaWAjObiYl8ztkR2o_5v3e8cXb9bQXULgaUkSJJicDhJSaKTmqb",
         icon: CalendarIcon,
       },
       {
