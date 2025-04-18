@@ -58,7 +58,7 @@ export const RESUME_DATA = {
       company: "1C Company",
       badges: ["Remote"],
       title: "Software Developer",
-      start: "Feb. 2025",
+      start: "Jan. 2025",
       end: "To Date",
       description: ``,
     },
