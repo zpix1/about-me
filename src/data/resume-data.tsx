@@ -55,25 +55,33 @@ export const RESUME_DATA = {
   ],
   work: [
     {
+      company: "1C Company",
+      badges: ["Remote"],
+      title: "Software Developer",
+      start: "Feb. 2025",
+      end: "To Date",
+      description: ``,
+    },
+    {
       company: "Huawei RRI",
       badges: [],
       title: "Typescript Engineer",
-      start: "Apr. 2022",
-      end: "To Date",
+      start: "April 2022",
+      end: "Jan. 2025",
       description: `Contributed to Huawei Project as a Software Engineer, specializing in IDE desktop software. 
 Utilized Electron, TypeScript, React, and Java to drive UI development, UI component library creation, and IDE extension infrastructure. 
 Spearheaded CI setup and visual regression testing. 
 Actively developed features for the IDE base platform, while also fixing bugs to enhance overall software reliability. 
-Additionally, took ownership of a project component and effectively managed its development lifecycle`,
+Additionally, took ownership of a project component and effectively managed its development lifecycle.`,
     },
     {
       company: "JetBrains",
       badges: ["Remote"],
       title: "Software Developer",
       start: "July 2021",
-      end: "Mar. 2022",
+      end: "March 2022",
       description:
-        "Developed a feature-rich internal web app using TypeScript, React, styled-components, Protobuf, and gRPC. Integrated JWT and OAuth2 for subsystem connections, and ensured robustness with Cypress testing. Collaborated on a Scala codebase, utilized various tools, and managed databases and AWS services. Created a FastAPI-powered web app for ML entity comparison, enhancing model precision for the team",
+        "Developed a feature-rich internal web app using TypeScript, React, styled-components, Protobuf, and gRPC. Integrated JWT and OAuth2 for subsystem connections, and ensured robustness with Cypress testing. Collaborated on a Scala codebase, utilized various tools, and managed databases and AWS services. Created a FastAPI-powered web app for ML entity comparison, enhancing model precision for the team.",
     },
   ],
   skills: [
@@ -90,10 +98,10 @@ Additionally, took ownership of a project component and effectively managed its 
       title: "Youtube Anti Translate",
       techStack: ["Chrome Extension", "JavaScript"],
       description:
-        "A chrome extension to disable YouTube video titles translation, 5000+ users",
+        "A chrome extension to disable YouTube video titles translation, 20000+ users",
       link: {
         label: "chromewebstore.google.com",
-        href: "https://chromewebstore.google.com/detail/youtube-anti-translate/ndpmhjnlfkgfalaieeneneenijondgag?hl=ru",
+        href: "https://chromewebstore.google.com/detail/youtube-anti-translate/ndpmhjnlfkgfalaieeneneenijondgag",
       },
     },
     {
