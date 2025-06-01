@@ -98,7 +98,7 @@ Additionally, took ownership of a project component and effectively managed its 
       title: "Youtube Anti Translate",
       techStack: ["Chrome Extension", "JavaScript"],
       description:
-        "A chrome extension to disable YouTube video titles translation, 20000+ users",
+        "A chrome extension to disable YouTube video titles translation, 30000+ users",
       link: {
         label: "chromewebstore.google.com",
         href: "https://chromewebstore.google.com/detail/youtube-anti-translate/ndpmhjnlfkgfalaieeneneenijondgag",
@@ -133,6 +133,18 @@ Additionally, took ownership of a project component and effectively managed its 
       link: {
         label: "mindtrainer.ru",
         href: "https://mindtrainer.ru/",
+      },
+    },
+  ],
+  publications: [
+    {
+      title: "Method of Reducing Memory Size for Some Constrained Code",
+      publisher: "IEEE",
+      authors: "Ivan Baksheev; Boris Ryabko",
+      date: "26 November 2024",
+      link: {
+        label: "IEEE Xplore",
+        href: "https://ieeexplore.ieee.org/document/10758444",
       },
     },
   ],

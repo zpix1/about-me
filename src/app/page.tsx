@@ -236,7 +236,7 @@ export default function Page() {
             <CardContent className="text-sm">
               pwn.college belt owner:{" "}
               <a className="hover:underline" href="https://pwn.college/">
-                pwn.college/belts
+                pwn.college
               </a>{" "}
             </CardContent>
           </Card>
@@ -264,6 +264,22 @@ export default function Page() {
               </Collapsible>
             </CardContent>
           </Card>
+        </Section>
+        <Section className="print-force-new-page scroll-mb-16 print:pt-12">
+          <h2 className="text-xl font-bold">Publications</h2>
+          <div className="-mx-3 grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3 print:grid-cols-3 print:gap-2">
+            {RESUME_DATA.publications.map((publication) => {
+              return (
+                <ProjectCard
+                  key={publication.title}
+                  title={publication.title}
+                  description={`${publication.authors} - ${publication.publisher}`}
+                  tags={[publication.date]}
+                  link={publication.link?.href}
+                />
+              );
+            })}
+          </div>
         </Section>
         <Section>
           <h2 className="text-xl font-bold">Skills</h2>
