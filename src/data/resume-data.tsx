@@ -60,7 +60,8 @@ export const RESUME_DATA = {
       title: "Software Developer",
       start: "Jan. 2025",
       end: "To Date",
-      description: ``,
+      description: `Working on an IDE for 1C:Element - a business application development platform in the 1C:Enterprise ecosystem, 
+      Russia's most popular business automation software.`,
     },
     {
       company: "Huawei RRI",
@@ -69,10 +70,7 @@ export const RESUME_DATA = {
       start: "April 2022",
       end: "Jan. 2025",
       description: `Contributed to Huawei Project as a Software Engineer, specializing in IDE desktop software. 
-Utilized Electron, TypeScript, React, and Java to drive UI development, UI component library creation, and IDE extension infrastructure. 
-Spearheaded CI setup and visual regression testing. 
-Actively developed features for the IDE base platform, while also fixing bugs to enhance overall software reliability. 
-Additionally, took ownership of a project component and effectively managed its development lifecycle.`,
+Developed an AI plugin from scratch, which included AI powered completion, edits, chat, codebase indexing and more.`,
     },
     {
       company: "JetBrains",
@@ -80,8 +78,9 @@ Additionally, took ownership of a project component and effectively managed its 
       title: "Software Developer",
       start: "July 2021",
       end: "March 2022",
-      description:
-        "Developed a feature-rich internal web app using TypeScript, React, styled-components, Protobuf, and gRPC. Integrated JWT and OAuth2 for subsystem connections, and ensured robustness with Cypress testing. Collaborated on a Scala codebase, utilized various tools, and managed databases and AWS services. Created a FastAPI-powered web app for ML entity comparison, enhancing model precision for the team.",
+      description: `Developed an internal web app to manage IDE error reports. 
+        Integrated JWT and OAuth2 for subsystem connections, and ensured robustness with Cypress testing. 
+        Collaborated on a Scala codebase. `,
     },
   ],
   skills: [
@@ -98,41 +97,19 @@ Additionally, took ownership of a project component and effectively managed its 
       title: "Youtube Anti Translate",
       techStack: ["Chrome Extension", "JavaScript"],
       description:
-        "A chrome extension to disable YouTube video titles translation, 30000+ users",
+        "A chrome extension to disable YouTube video titles translation, 100000+ users",
       link: {
         label: "chromewebstore.google.com",
         href: "https://chromewebstore.google.com/detail/youtube-anti-translate/ndpmhjnlfkgfalaieeneneenijondgag",
       },
     },
     {
-      title: "Pechatay",
-      techStack: ["Vue.js", "WebSockets"],
-      description: "PvP typing trainer",
+      title: "WinDisplay",
+      techStack: ["Rust", "Tauri"],
+      description: "A growing desktop app to manage your monitors stack",
       link: {
-        label: "pechatay",
-        href: "https://zpix1.github.io/pechatay/#/",
-      },
-    },
-
-    {
-      title: "VK PM Downloader",
-      techStack: ["Vue.js"],
-      description:
-        "Client-side VK (Russian social network) private messages downloader with a nice material design, UI/UX, and a broad customer base",
-      logo: "YourLogoURLHere",
-      link: {
-        label: "zpix1.github.io/vk-pm-downloader/",
-        href: "https://zpix1.github.io/vk-pm-downloader/",
-      },
-    },
-    {
-      title: "MindTrainer",
-      techStack: ["Ruby On Rails", "JavaScript", "Python", "Docker"],
-      description:
-        "A website for high school and university students to have fun and train by solving small math-related tasks",
-      link: {
-        label: "mindtrainer.ru",
-        href: "https://mindtrainer.ru/",
+        label: "github.com/zpix1/windisplay",
+        href: "https://github.com/zpix1/windisplay",
       },
     },
   ],
