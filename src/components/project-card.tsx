@@ -6,31 +6,39 @@ import {
   CardTitle,
 } from "./ui/card";
 import { Badge } from "./ui/badge";
+import { Star } from "lucide-react";
 
 interface Props {
   title: string;
   description: string;
   tags: readonly string[];
   link?: string;
+  stars?: number;
 }
 
-export function ProjectCard({ title, description, tags, link }: Props) {
+export function ProjectCard({ title, description, tags, link, stars }: Props) {
   return (
     <Card className="flex flex-col overflow-hidden border border-muted p-3">
       <CardHeader className="">
         <div className="space-y-1">
-          <CardTitle className="text-base">
+          <CardTitle className="flex items-center justify-between text-base">
             {link ? (
               <a
                 href={link}
                 target="_blank"
-                className="inline-flex w-full items-center gap-1 hover:underline"
+                className="inline-flex items-center gap-1 hover:underline"
               >
-                <span className="max-w-[90%]">{title}</span>{" "}
+                <span className="">{title}</span>{" "}
                 <span className="h-1 w-1 rounded-full bg-green-500"></span>
               </a>
             ) : (
               title
+            )}
+            {stars !== undefined && (
+              <div className="flex items-center gap-1 text-xs font-normal text-muted-foreground">
+                <Star className="size-3" />
+                {stars}
+              </div>
             )}
           </CardTitle>
           <div className="hidden font-mono text-xs underline print:visible">

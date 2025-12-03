@@ -14,7 +14,6 @@ import {
 import { Button } from "@/components/ui/button";
 import { RESUME_DATA } from "@/data/resume-data";
 import { ProjectCard } from "@/components/project-card";
-import { useMemo } from "react";
 import {
   Tooltip,
   TooltipContent,
@@ -34,16 +33,39 @@ export const metadata: Metadata = {
   description: RESUME_DATA.about,
 };
 
-export default function Page() {
-  const workExperience = useMemo(() => {
-    const now = new Date();
-    const start = new Date("July 1, 2021 12:00:00");
-    const expInMonth = monthDiff(start, now);
-    const years = formatYear(Math.floor(expInMonth / 12));
-    const months = formatMonth(expInMonth % 12);
+async function getGitHubStars(url: string): Promise<number | undefined> {
+  try {
+    const match = url.match(/github\.com\/([^\/]+)\/([^\/]+)/);
+    if (!match) return undefined;
+    const [, owner, repo] = match;
+    const res = await fetch(`https://api.github.com/repos/${owner}/${repo}`, {
+      next: { revalidate: 3600 },
+    });
+    if (!res.ok) return undefined;
+    const data = await res.json();
+    return data.stargazers_count;
+  } catch (e) {
+    return undefined;
+  }
+}
 
-    return `${years}${months && ", " + months}`;
-  }, []);
+export default async function Page() {
+  const now = new Date();
+  const start = new Date("July 1, 2021 12:00:00");
+  const expInMonth = monthDiff(start, now);
+  const years = formatYear(Math.floor(expInMonth / 12));
+  const months = formatMonth(expInMonth % 12);
+  const workExperience = `${years}${months && ", " + months}`;
+
+  const projects = await Promise.all(
+    RESUME_DATA.projects.map(async (project) => {
+      let stars;
+      if ("link" in project && project.link.href.includes("github.com")) {
+        stars = await getGitHubStars(project.link.href);
+      }
+      return { ...project, stars };
+    }),
+  );
 
   const ctfs = ctfHistory.map((ctf, i) => (
     <TooltipProvider key={ctf.name}>
@@ -126,11 +148,11 @@ export default function Page() {
                   <span className="underline">{RESUME_DATA.contact.email}</span>
                 </a>
               ) : null}
-              {RESUME_DATA.contact.tel ? (
+              {/* {RESUME_DATA.contact.tel ? (
                 <a href={`tel:${RESUME_DATA.contact.tel}`}>
                   <span className="underline">{RESUME_DATA.contact.tel}</span>
                 </a>
-              ) : null}
+              ) : null} */}
             </div>
           </div>
 
@@ -204,6 +226,39 @@ export default function Page() {
           })}
         </Section>
 
+        <Section className="print-force-new-page scroll-mb-16">
+          <h2 className="text-xl font-bold">Projects</h2>
+          <div className="-mx-3 grid grid-cols-1 gap-3 print:grid-cols-2 print:gap-2 md:grid-cols-2 lg:grid-cols-2">
+            {projects.map((project) => {
+              return (
+                <ProjectCard
+                  key={project.title}
+                  title={project.title}
+                  description={project.description}
+                  tags={project.techStack}
+                  link={"link" in project ? project.link.href : undefined}
+                  stars={project.stars}
+                />
+              );
+            })}
+          </div>
+        </Section>
+        <Section className="scroll-mb-16">
+          <h2 className="text-xl font-bold">Publications</h2>
+          <div className="-mx-3 grid grid-cols-1 gap-3 print:grid-cols-2 print:gap-2 md:grid-cols-2 lg:grid-cols-2">
+            {RESUME_DATA.publications.map((publication) => {
+              return (
+                <ProjectCard
+                  key={publication.title}
+                  title={publication.title}
+                  description={`${publication.authors} - ${publication.publisher}`}
+                  tags={[publication.date]}
+                  link={publication.link?.href}
+                />
+              );
+            })}
+          </div>
+        </Section>
         <Section>
           <h2 className="text-xl font-bold">
             Computer Security / CTF Experience
@@ -264,39 +319,6 @@ export default function Page() {
               </Collapsible>
             </CardContent>
           </Card>
-        </Section>
-
-        <Section className="print-force-new-page scroll-mb-16 print:pt-12">
-          <h2 className="text-xl font-bold">Projects</h2>
-          <div className="-mx-3 grid grid-cols-1 gap-3 print:grid-cols-3 print:gap-2 md:grid-cols-2 lg:grid-cols-3">
-            {RESUME_DATA.projects.map((project) => {
-              return (
-                <ProjectCard
-                  key={project.title}
-                  title={project.title}
-                  description={project.description}
-                  tags={project.techStack}
-                  link={"link" in project ? project.link.href : undefined}
-                />
-              );
-            })}
-          </div>
-        </Section>
-        <Section className="print-force-new-page scroll-mb-16 print:pt-12">
-          <h2 className="text-xl font-bold">Publications</h2>
-          <div className="-mx-3 grid grid-cols-1 gap-3 print:grid-cols-3 print:gap-2 md:grid-cols-2 lg:grid-cols-3">
-            {RESUME_DATA.publications.map((publication) => {
-              return (
-                <ProjectCard
-                  key={publication.title}
-                  title={publication.title}
-                  description={`${publication.authors} - ${publication.publisher}`}
-                  tags={[publication.date]}
-                  link={publication.link?.href}
-                />
-              );
-            })}
-          </div>
         </Section>
         <Section>
           <h2 className="text-xl font-bold">Skills</h2>

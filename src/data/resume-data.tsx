@@ -99,8 +99,8 @@ Developed an AI plugin from scratch, which included AI powered completion, edits
       description:
         "A chrome extension to disable YouTube video titles translation, 100000+ users",
       link: {
-        label: "chromewebstore.google.com",
-        href: "https://chromewebstore.google.com/detail/youtube-anti-translate/ndpmhjnlfkgfalaieeneneenijondgag",
+        label: "github.com/zpix1/yt-anti-translate",
+        href: "https://github.com/zpix1/yt-anti-translate",
       },
     },
     {
