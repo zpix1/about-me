@@ -38,9 +38,7 @@ async function getGitHubStars(url: string): Promise<number | undefined> {
     const match = url.match(/github\.com\/([^\/]+)\/([^\/]+)/);
     if (!match) return undefined;
     const [, owner, repo] = match;
-    const res = await fetch(`https://api.github.com/repos/${owner}/${repo}`, {
-      next: { revalidate: 3600 },
-    });
+    const res = await fetch(`https://api.github.com/repos/${owner}/${repo}`);
     if (!res.ok) return undefined;
     const data = await res.json();
     return data.stargazers_count;
