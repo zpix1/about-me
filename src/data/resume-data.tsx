@@ -130,7 +130,7 @@ Developed an AI plugin from scratch, which included AI powered completion, edits
       publisher: "IEEE",
       authors:
         "Boris Ryabko; Andrey Fionov; Ivan Baksheev; Vyacheslav Zhuravlev",
-      date: "November 2025",
+      date: "December 2025",
       link: {
         label: "IEEE Xplore",
         href: "https://ieeexplore.ieee.org/document/11289371",
