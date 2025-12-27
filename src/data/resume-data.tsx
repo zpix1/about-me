@@ -115,10 +115,32 @@ Developed an AI plugin from scratch, which included AI powered completion, edits
   ],
   publications: [
     {
+      title: "Enumerative Constrained Coding in Two and Three Dimensions",
+      publisher: "IEEE",
+      authors: "Ivan Baksheev",
+      date: "December 2025",
+      link: {
+        label: "IEEE Xplore",
+        href: "https://ieeexplore.ieee.org/document/11301501",
+      },
+    },
+    {
+      title:
+        "Comparative Analysis of the Efficiency of Entropy Codes and Recommendations for Their Use",
+      publisher: "IEEE",
+      authors:
+        "Boris Ryabko; Andrey Fionov; Ivan Baksheev; Vyacheslav Zhuravlev",
+      date: "November 2025",
+      link: {
+        label: "IEEE Xplore",
+        href: "https://ieeexplore.ieee.org/document/11289371",
+      },
+    },
+    {
       title: "Method of Reducing Memory Size for Some Constrained Code",
       publisher: "IEEE",
       authors: "Ivan Baksheev; Boris Ryabko",
-      date: "26 November 2024",
+      date: "November 2024",
       link: {
         label: "IEEE Xplore",
         href: "https://ieeexplore.ieee.org/document/10758444",
