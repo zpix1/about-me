@@ -97,7 +97,7 @@ Developed an AI plugin from scratch, which included AI powered completion, edits
       title: "Youtube Anti Translate",
       techStack: ["Chrome Extension", "JavaScript"],
       description:
-        "A chrome extension to disable YouTube video titles translation, 100000+ users",
+        "A chrome extension to disable YouTube video titles translation, 200000+ users",
       link: {
         label: "github.com/zpix1/yt-anti-translate",
         href: "https://github.com/zpix1/yt-anti-translate",
