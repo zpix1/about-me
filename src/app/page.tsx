@@ -66,7 +66,6 @@ export default async function Page() {
       return { ...project, stars };
     }),
   );
-
   const ctfs = ctfHistory.map((ctf, i) => (
     <TooltipProvider key={ctf.name}>
       <Tooltip>
